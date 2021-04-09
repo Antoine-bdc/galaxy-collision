@@ -1,0 +1,18 @@
+double g_dist(double q);
+double* central_acceleration(int i_star, double** r_stars, double* m_stars);
+void reposition(double** r_stars);
+double* PP_acceleration(int i_star, double** r_stars, double* m_stars);
+double* PM_acceleration(double* r_star, double**** potential_gradient);
+void LEAP_FROG(double local_dt, double** r_stars, double** v_stars, double** a_stars, double* m_stars,double**** potential_gradient);
+void KICK_DRIFT_KICK(FILE* dt_file, double** r_stars, double** v_stars, double** a_stars, double* m_stars, double**** potential_gradient);
+void EULER(double local_dt, double** r_stars, double** v_stars, double** a_stars, double* m_stars, double**** potential_gradient);
+void initiate_plummer(double** r_stars, double** v_stars, double** a_stars, double* m_stars);
+void initiate_a_plummer(double* center, int starting_i, int galaxy_stars, double* v_global, double a, double** r_stars, double** v_stars, double** a_stars, double* m_stars);
+double potential_energy(double** r_stars, double** v_stars, double* m_stars);
+double kinetic_energy(double** r_stars, double** v_stars, double* m_stars);
+void update_density_0(double*** density, double** r_stars, double* m_stars);
+void update_density_1(double*** density, double** r_stars, double* m_stars);
+double*** initiate_potential(double*** density);
+void jacobi_potential(double*** potential, double*** density);
+void gauss_seidel_potential(double*** potential, double*** density);
+void SOR_potential(double*** potential, double*** density);
