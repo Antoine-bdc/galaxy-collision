@@ -27,8 +27,8 @@ int dynamical_dt = 0;                    /// Dynamical evolution of time step (0
 int second_object = 1;                   /// Presence of additionnal object (0 = None), (1 = galaxy 2), (2 = SMBH)
 
 // Simulation parameters:
-double dt = 1e10;                        /// Time step delta t in seconds
-int n_t = 3001  ;                        /// Total number of time steps
+double dt = 1e10;                        /// Time step delta t
+int n_t = 10001  ;                        /// Total number of time steps
 double jacobi_precision = 1.e-4;         /// Potential precision for jacobi method
 double gauss_seidel_precision = 1.e-4;   /// Potential precision for Gauss Seidel and SOR method
 
@@ -36,15 +36,15 @@ double gauss_seidel_precision = 1.e-4;   /// Potential precision for Gauss Seide
 double m = 1.5e31;                       /// Mass for each star
 double m_SMBH = 5.e34;                  /// Mass of the supermassive black hole if applicable
 int n_stars = 5000;                         /// Total number of stars
-double fraction_stars = 0.6;              /// Fraction of stars in the galaxy 1
-double a1 = 0.07;                         /// Galaxy 1 typical size (in grid length fraction)
-double a2 = 0.05;                        /// Galaxy 2 typical size (in grid length fraction) if applicable
+double fraction_stars = 0.66;              /// Fraction of stars in the galaxy 1
+double a1 = 0.05;                         /// Galaxy 1 typical size (in grid length fraction)
+double a2 = 0.025;                        /// Galaxy 2 typical size (in grid length fraction) if applicable
 
 double x_1 = 1./2;                       /// initial position x of galaxy 1 (in grid length fraction)
 double y_1 = 1./2;                       /// initial position y of galaxy 1 (in grid length fraction)
 double z_1 = 1./2;                       /// initial position z of galaxy 1 (in grid length fraction)
 
-double x_2 = 1.5/2;                      /// initial position x of galaxy 2 / SMBH (in grid length fraction) if applicable
+double x_2 = 1.25/2;                      /// initial position x of galaxy 2 / SMBH (in grid length fraction) if applicable
 double y_2 = 0.1/2;                      /// initial position y of galaxy 2 / SMBH (in grid length fraction) if applicable
 double z_2 = 1./2;                       /// initial position z of galaxy 2 / SMBH (in grid length fraction) if applicable
 
@@ -53,5 +53,5 @@ double vy_1 = 0.;                        /// initial global velocity y of galaxy
 double vz_1 = 0.;                        /// initial global velocity z of galaxy 1 (in grid length fraction)
 
 double vx_2 = 0.;                 /// initial global velocity x of galaxy 2 / SMBH(in grid length fraction) if applicable
-double vy_2 = 1.8;                        /// initial global velocity y of galaxy 2 / SMBH(in grid length fraction) if applicable
+double vy_2 = 5;                        /// initial global velocity y of galaxy 2 / SMBH(in grid length fraction) if applicable
 double vz_2 = 0.;                        /// initial global velocity z of galaxy 2 / SMBH(in grid length fraction) if applicable

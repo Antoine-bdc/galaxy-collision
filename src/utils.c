@@ -436,5 +436,5 @@ void print_field(double*** field, FILE* field_file){
     }
     fprintf(field_file, "\n");
   }
-  printf("total field at time %g is %g. On slice %g\n", t, tot, slice);
+  // printf("total field at time %g is %g. On slice %g\n", t, tot, slice);
 }

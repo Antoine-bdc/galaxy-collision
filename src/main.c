@@ -16,6 +16,7 @@
 #include <time.h>
 
 int main(){
+
   /**
 * @brief Main function executing all the routines necessary for PM integration
 * @details The main function will perform the following tasks :
@@ -39,7 +40,7 @@ int main(){
   FILE* laplacian_file;
   FILE* energy_file;
   FILE* dt_file;
-  char* directory = "../data/data";
+  char* directory_kinematics = "../data/kinematics/";
   char* file_name = "time_";
   char* directory_potential = "../data/potential/";
   char* directory_density = "../data/density/";
@@ -134,7 +135,7 @@ int main(){
   write_parameters();
 
   // Saving data at time 0
-  sprintf(full_name, "%s%s%06d%s", directory, file_name, 0, file_type);
+  sprintf(full_name, "%s%s%06d%s", directory_kinematics, file_name, 0, file_type);
   sprintf(full_name_potential, "%s%s%06d%s", directory_potential, file_name_potential, 0, file_type);
   sprintf(full_name_density, "%s%s%06d%s", directory_density, file_name_density, 0, file_type);
 
@@ -191,7 +192,7 @@ int main(){
     }
 
     // Saving data (phase space, potential, density)
-    sprintf(full_name, "%s%s%06d%s", directory, file_name, i, file_type);
+    sprintf(full_name, "%s%s%06d%s", directory_kinematics, file_name, i, file_type);
     sprintf(full_name_potential, "%s%s%06d%s", directory_potential, file_name_potential, i, file_type);
     sprintf(full_name_density, "%s%s%06d%s", directory_density, file_name_density, i, file_type);
 
@@ -201,7 +202,7 @@ int main(){
 
     print_field(density, density_file);
     print_field(potential, potential_file);
-    write_data(kinematics_file, r_stars, v_stars, a_stars, m_stars);
+    write_data(kinematics_file, r_stars, v_stars, a_stars, m_stars); // rx, ry, rz, vx, vy, vz, ax, ay, az, m
 
     fclose(kinematics_file);
     fclose(density_file);

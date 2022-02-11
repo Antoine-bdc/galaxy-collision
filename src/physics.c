@@ -623,7 +623,7 @@ void jacobi_potential(double*** potential, double*** density){
     }
     n+=1;
     eps1 = sqrt(eps1);
-    printf("%d \n", n);
+    // printf("%d \n", n);
   }
   free_space(previous_potential);
 }
@@ -664,7 +664,7 @@ void gauss_seidel_potential(double*** potential, double*** density){
     eps1 = sqrt(eps1);
 
     if (n>0){
-      printf("%d (%g)\n", n, eps1/eps0 - 1);
+      // printf("%d (%g)\n", n, eps1/eps0 - 1);
     }
     n+=1;
   }
