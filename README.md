@@ -44,12 +44,12 @@ To plot data execute the python file visualisation.py.
 The program will then prompt a question for which plots you want to get, answer with the format [X1, X2, X3] where Xi is the data you want to plot.
 It is also possible to type the command "python3 visualisation.py 2 3 5 6" to plot the data 2 3 5 6
 By default the python program will plot the data from the folders ..\data\, ..\potential\  and ..\density\
-If one wants to plot files from different data they can open the "visualisation.py" file and change the suffix. For instance suffix="plummer" will plot the data from the file ..\data_plummer\, ..\potential_plummer\  and ..\density_plummer\
+If one wants to plot files from different data they can open the "visualisation.py" file and change the suffix. For instance suffix="plummer" will plot the data from the file ```..\data_plummer\```, ```..\potential_plummer\```  and ```..\density_plummer\```
 
 Similarly, to plot an animation one can use the command "python3 animate_density.py". You can set the "save_film" variable to True in the file to save the animation as ../collision_animation.mp4
 
 
 ## Other :
 
--To clean all data created by the program run command 'make clean_data'
--The documentation can be found in HTML format in the folder ../html and can be accessed by opening index.html in any web browser
+- To clean all data created by the program run command 'make clean_data'
+- The documentation can be found in HTML format in the folder ../html and can be accessed by opening index.html in any web browser
