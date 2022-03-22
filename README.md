@@ -2,7 +2,7 @@
 
 This code was written to execute celestial mechanics simulations with a high number of objects using particle mesh computational methods.
 In particular it has been designed to simulate the collision of a galaxy with an impactor which can either be a point mass or another galaxy.
-A few templates for constants.c with initial parameters running a typical galaxy collision simulation can be found in the ```/collisions``` folder.
+A few templates for constants.c with initial parameters running a typical galaxy collision simulation can be found in the ```/constants_templates``` folder.
 The general structure of the code is the following :
 - constants.c contains the global simulations parameters
 - main.c initiates and executes simulations using parameters found in constants.c and functions found in physics.c. Additionally it writes simulation data in files
@@ -12,22 +12,24 @@ The general structure of the code is the following :
 
 ## Requirements :
 
-GCC compiler to run the main program
+GCC compiler to run the main program.
+
 Python libraries for plotting :
 - numpy
 - matplotlib
 - astropy.constants
 - mpl_toolkits
-Doxygen to build the documentation
+
+Doxygen to build the documentation.
 
 
 ## Initial conditions files :
 
-3 constants.c files can be found in the ```/collisions``` folder.
+3 constants.c files can be found in the ```/constants_templates``` folder.
 To use any of them one can just copy all their content and paste to the file named ```constants.c``` or just rename the file ```constants.c```. Either way, only the file ```constants.c``` will be loaded by the simulation.
 standard_simulation : runs a not too heavy standard simulation
 static_plummer_galaxy : runs the (rather heavy) made to test all methods of the PM method
-plummer_blackhole_collision : runs a simulation that will perform a collision between a Plummer galaxy and a SMBH.
+plummer_blackhole_collision : runs a simulation that will perform a collision between a Plummer galaxy and a very massive particle (akin to a blackhole).
 plummer_plummer_high_b : runs a collision between two plummer galaxies with a high impact parameter
 long_plummer_plummer : runs a long simulation of the collision between two plummer galaxies
 ## Run simulations :
