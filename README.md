@@ -9,6 +9,10 @@ The general structure of the code is the following :
 - physics.c contains all functions performing physical computations
 - utils.c contains utility functions performing basic tasks
 
+Below is shown the density 2D slice of the collision of two galaxies:
+![galaxy collision density slice](animations/gif/Plummer_fusion.gif)
+
+A project report (in french) can be found under `report/Collision_de_galaxies_rapport.pdf`
 
 ## Requirements :
 
@@ -25,13 +29,14 @@ Doxygen to build the documentation.
 
 ## Initial conditions files :
 
-3 constants.c files can be found in the ```/constants_templates``` folder.
+A few constants.c files can be found in the ```/constants_templates``` folder.
 To use any of them one can just copy all their content and paste to the file named ```constants.c``` or just rename the file ```constants.c```. Either way, only the file ```constants.c``` will be loaded by the simulation.
-standard_simulation : runs a not too heavy standard simulation
-static_plummer_galaxy : runs the (rather heavy) made to test all methods of the PM method
-plummer_blackhole_collision : runs a simulation that will perform a collision between a Plummer galaxy and a very massive particle (akin to a blackhole).
-plummer_plummer_high_b : runs a collision between two plummer galaxies with a high impact parameter
-long_plummer_plummer : runs a long simulation of the collision between two plummer galaxies
+Template description:
+- standard_simulation : runs a not too heavy standard simulation
+- static_plummer_galaxy : runs the (rather heavy) made to test all methods of the PM method
+- plummer_blackhole_collision : runs a simulation that will perform a collision between a Plummer galaxy and a very massive particle (akin to a blackhole).
+- long_plummer_plummer : runs a long simulation of the collision between two plummer galaxies
+- plummer_plummer_high_b : runs a collision between two plummer galaxies with a high impact parameter
 ## Run simulations :
 
 

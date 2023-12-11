@@ -1,6 +1,6 @@
 /**
 * @file physics.c
-* @author Cereale
+* @author Antoine
 * @brief This file contains all the functions related to the physical computations of the system.
 */
 

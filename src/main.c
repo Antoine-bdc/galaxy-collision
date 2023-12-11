@@ -1,6 +1,6 @@
 /**
 * @file main.c
-* @author Cereale
+* @author Antoine
 * @date 5 Feb 2020
 * @brief File main.c of the galaxy collision project. Contains initiation of most of the useful variable and integrates the system over n_t time steps
 * Initial conditions and methods used are defined by the values contained in the constant.c file

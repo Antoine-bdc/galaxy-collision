@@ -1,6 +1,6 @@
 /**
 * @file utils.c
-* @author Cereale
+* @author Antoine
 * @brief File containing utility functions
 */
 
